@@ -1,22 +1,19 @@
 #!/usr/bin/python3
-'''Defines class student
-'''
+"""defines class Square that inherits from Rectangle"""
 
 
-class Student:
-    '''Represents user data of a student
-    '''
-    def __init__(self, first_name, last_name, age):
-        '''Initializes a new student inatsnce
-        '''
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+Rectangle = __import__('9-rectangle').Rectangle
 
-    def to_json(self, attrs=None):
-        '''Returns a dictionary representation of the student instance
-        '''
-        if type(attrs) == list and all(map(lambda x: type(x) == str, attrs)):
-            return {key: self.__dict__[key]
-                    for key in self.__dict__.keys() if key in attrs}
-        return self.__dict__
+
+class Square(Rectangle):
+    """class for square that inherits from Rectangle
+    with method for area"""
+    def __init__(self, size):
+        """initializes Square instance"""
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
+
+    def area(self):
+        """returns area of square"""
+        return (self.__size * self.__size)_
