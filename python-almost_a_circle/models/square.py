@@ -50,3 +50,19 @@ class Square(Rectangle):
                 setattr(self, attr, kwargs[attr])
         else:
             raise ValueError("update: positional and/or keyword arg required")
+
+     def to_dictionary(self):
+        """
+        return a dict repr of a square
+        """
+        a = self.__dict__
+        my_dict = {}
+        for key, value in a.items():
+            if len(key) > 2:
+                key = key[12:]
+                if key in ["width", "height"]:
+                    key = "size"
+                my_dict[key] = value
+            else:
+                my_dict[key] = value
+        return my_dict
