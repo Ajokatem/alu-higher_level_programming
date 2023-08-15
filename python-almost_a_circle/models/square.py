@@ -50,4 +50,3 @@ class Square(Rectangle):
                 setattr(self, attr, kwargs[attr])
         else:
             raise ValueError("update: positional and/or keyword arg required")
-
