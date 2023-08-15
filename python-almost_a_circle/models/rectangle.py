@@ -17,7 +17,6 @@ class Rectangle(Base):
         self.__width = width
         self.__x = x
         self.__y = y
-        self.id = id
         super().__init__(id)
 
     @property
@@ -34,7 +33,7 @@ class Rectangle(Base):
         """
         self.__height = height
 
-    @width
+    @property
     def width(self):
         """
         doc
@@ -47,3 +46,31 @@ class Rectangle(Base):
         doc
         """
         self.__width = width
+
+    @property
+    def x(self):
+        """
+        doc
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, x):
+        """
+        doc
+        """
+        self.__x = x
+
+    @property
+    def y(self):
+        """
+        doc
+        """
+        return self.__y
+
+    @y.setterx
+    def y(self, y):
+        """
+        doc
+        """
+        self.__y = y
