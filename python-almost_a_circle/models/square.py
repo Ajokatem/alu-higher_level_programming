@@ -51,7 +51,7 @@ class Square(Rectangle):
         else:
             raise ValueError("update: positional and/or keyword arg required")
 
-     def to_dictionary(self):
+    def to_dictionary(self):
         """
         return a dict repr of a square
         """
