@@ -67,6 +67,8 @@ class Rectangle(Base):
         """
         doc
         """
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
         self.__x = x
@@ -83,6 +85,8 @@ class Rectangle(Base):
         """
         doc
         """
+        if not is instance(y, int):
+            raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
