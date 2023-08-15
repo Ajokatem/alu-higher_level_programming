@@ -34,4 +34,5 @@ class Square(Rectangle):
         """
         doc
         """
-        self.size = size
+        self.height = size
+        self.width = size
