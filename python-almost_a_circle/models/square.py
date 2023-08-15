@@ -4,6 +4,7 @@ module
 """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     class Square
@@ -20,3 +21,17 @@ class Square(Rectangle):
         """
         return (f"[{self.__class__.__name__}] ({self.id})"
                 f" {self.x}/{self.y} - {self.width}")
+
+    @property
+    def size(self):
+        """
+        doc
+        """
+        return self.size
+
+    @size.setter
+    def size(self, size):
+        """
+        doc
+        """
+        self.size = size
