@@ -15,7 +15,7 @@ class Base():
         intantiating a new obj
         """
         if not id:
-            __nb_objects += 1
-            self.id = __nb_objects
+            self.__class__.__nb_objects += 1
+            self.id = self.__class__.__nb_objects
         else:
             self.id = id
