@@ -12,7 +12,7 @@ class Square(Rectangle):
         """
         obj
         """
-        super().__init__(self, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """
