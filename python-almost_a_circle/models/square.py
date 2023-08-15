@@ -13,3 +13,10 @@ class Square(Rectangle):
         obj
         """
         super().__init__(self, x, y, id)
+
+    def __str__(self):
+        """
+        doc
+        """
+        return (f"[{self.__class__.__name__}] ({self.id})"
+                f" {self.x}/{self.y} - {self.width}")
