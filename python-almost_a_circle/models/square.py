@@ -36,3 +36,18 @@ class Square(Rectangle):
         """
         self.width = size
         self.height = size
+
+    def update(self, *args, **kwargs):
+        """
+        updates all the attribute of a square
+        """
+        arg = ["id", "size", "x", "y"]
+        if args and len(args) > 0:
+            for i in range(len(args)):
+                setattr(self, arg[i], args[i])
+        elif kwargs:
+            for attr in kwargs:
+                setattr(self, attr, kwargs[attr])
+        else:
+            raise ValueError("update: positional and/or keyword arg required")
+
